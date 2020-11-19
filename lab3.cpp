@@ -102,6 +102,8 @@ error allocate_matrix(double** &matrix, int rowsCount, int colsCount) {
         for (int j; j < i; ++j) {
             delete[] matrix[j];
         }
+        delete[] matrix;
+        matrix = NULL;
         return mem_allocate;
     }
     return no_error;
