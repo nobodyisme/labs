@@ -249,7 +249,7 @@ error process_matrix(ErrData *err_data = NULL) {
     }
 
     cout << "Оригинальная матрица:" << endl;
-    cout << format_matrix(matrix, rowsCount, colsCount, 2);
+    cout << format_matrix((const double**)matrix, rowsCount, colsCount, 2);
 
     double** result_matrix;
     if (no_error != (err = copy_matrix(result_matrix, (const double**)matrix, rowsCount, colsCount))) {
@@ -258,7 +258,7 @@ error process_matrix(ErrData *err_data = NULL) {
     matrix_task(result_matrix, rowsCount, colsCount);
 
     cout << "Результат: " << endl;
-    cout << format_matrix(matrix, rowsCount, colsCount, 2);
+    cout << format_matrix((const double**)matrix, rowsCount, colsCount, 2);
 
     free_matrix(matrix, rowsCount);
     free_matrix(result_matrix, rowsCount);
