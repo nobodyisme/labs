@@ -147,7 +147,7 @@ error copy_matrix(double** &matrix, const double** src_matrix, const int rowsCou
 }
 
 
-string format_matrix(double** matrix, const int rowsCount, const int colsCount, const int precision, const int colwidth = 10) {
+string format_matrix(const double** matrix, const int rowsCount, const int colsCount, const int precision, const int colwidth = 10) {
     stringstream ss;
     for (int i = 0; i < rowsCount; i++) {
         for (int j = 0; j < colsCount; j++) {
